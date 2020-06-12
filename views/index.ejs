@@ -4,11 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Node Aula</title>
+    <title>Clientes | Listagem - Aula Node.js</title>
 </head>
 
 <body>
-    <h2>Alo Pepe Moreno</h2>
+    <h2>Clientes cadastrados</h2>
+    <ul>
+        <% lista.forEach(function(user) { %>
+            <li>
+                <%= user.nome %>
+                    <%= user.sobrenome %>
+                        <%= user.empresa %>
+            </li>
+            <% }) %>
+    </ul>
+
+    <a href="/registrar"><input type="button" value="Cadastrar-se"></a>
 </body>
 
 </html>
